@@ -1,0 +1,16 @@
+.upDownChevronContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.quantityContainer{
+    display: flex;
+    column-gap: 8px;
+}
+
+.flexEndContainer{
+    display: flex;
+    justify-content: flex-end;
+}
