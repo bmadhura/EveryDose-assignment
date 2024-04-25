@@ -52,14 +52,14 @@ const Lists = (props) => {
 
   const onDownChevronClick = (item) => {
     const newQuantity = Number(item.quantity) - 1;
-    if (newQuantity >= 0) setInventoryData((prev) => prev.map((i) => i.id === item.id ? { ...i, quantity: newQuantity } : i));
+    if (newQuantity > 0) setInventoryData((prev) => prev.map((i) => i.id === item.id ? { ...i, quantity: newQuantity } : i));
     else setShowAlert(true)
   }
 
   return (
     <div>
       <Alert color="danger" isOpen={showAlert} toggle={() => setShowAlert(false)}>
-        Quantity can not be less than zero
+        Quantity can not be less than one
       </Alert>
       <h2 className="App-header">Edit List</h2>
       <div className="d-flex justify-content-center">
